@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main() {
+    int x=16;
+   int counting = 0;
+   printf ("Result of bits: %d \n", rec_bit(x,counting));
+
+return 1;
+}
+
+int rec_bit( int x, int count)
+{       
+    if (x==0) return count;
+    if (x%2==1)
+    {
+        rec_bit(x/2,count+1);
+    }
+    else
+    rec_bit(x/2,count);
+}

@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main()
+{
+    int num;
+    printf("enter the number to check the power of two or not\n");
+    scanf("%d",&num);
+int i,j;
+for(i=2;i<num;i++)
+{
+    if(num%i==0)
+    {
+        break;
+    }
+}
+if(num==i)
+    printf("%d is prime\n",num);
+else
+  printf("%d is not prime numebr\n",num);
+    return 0;
+}

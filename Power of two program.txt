@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+    int num;
+    printf("enter the number to check the power of two or not\n");
+    scanf("%d",&num);
+    if(num&(num-1))
+    {
+        printf("%d is Not Power of 2\n",num);
+    }
+    else{
+       
+         printf("%d is Power of 2\n",num);
+    }
+    return 0;
+}

@@ -1,0 +1,13 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    int len1,len2,i;
+    char str1[10]="Mirafra";
+    char str2[10]="Technology";
+    for(i=0;str1[i];i++);
+    len1=i;
+    for(i=0;str2[i];i++);
+    len2=i;
+    printf("length of len1 is=%d\nlength of len2 is =%d\n",len1,len2);
+}

@@ -1,0 +1,73 @@
+#include<stdio.h>
+int main()
+{
+    int row,col,i,j,k,row1,col1;
+    printf("enter the size of array\n");
+    scanf("%d%d",&row,&col);
+    int a[row][col];
+    
+   printf("enter the array element\n");
+     for(i=0;i<row;i++)
+     {
+         for(j=0;j<col;j++)
+         {
+             scanf("%d",&a[i][j]);
+         }
+     }
+     printf("out of loop\n");
+      for(i=0;i<row;i++)
+     {
+         for(j=0;j<col;j++)
+         {
+             printf("%d\n",a[i][j]);
+         }
+     }
+     printf("enter the size of second array\n");
+    scanf("%d%d",&row1,&col1);
+    if(col==row1){
+    int b[row][col];
+     printf("enter the array element\n");
+     for(i=0;i<row;i++)
+     {
+         for(j=0;j<col;j++)
+         {
+             scanf("%d",&b[i][j]);
+         }
+     }
+     printf("out of loop\n");
+      for(i=0;i<row;i++)
+     {
+         for(j=0;j<col;j++)
+         {
+             printf("%d\n",b[i][j]);
+         }
+     }
+     
+     printf("output \n");
+     int c[row][col1];
+     for(i=0;i<row;i++)
+     {
+         for(j=0;j<col1;j++)
+         {
+             c[i][j]=0;
+             for(k=0;k<col1;k++)
+             {
+            c[i][j]+=a[i][k]*b[k][j];
+            
+             }
+         }
+     }
+     for(i=0;i<row;i++)
+     {
+         for(j=0;j<col1;j++)
+         {
+             printf("%d\n",c[i][j]);
+         }
+     }
+
+     }
+     
+     else
+     printf("operation is not possible\n");
+   return 0;
+}

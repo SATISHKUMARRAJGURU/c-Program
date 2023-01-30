@@ -1,0 +1,36 @@
+
+
+#include<stdio.h>
+#include<string.h>
+void main()
+{
+   int num=10;
+   int i,j;
+   printf("before reset\n");
+   for(i=31;i>=0;i--)
+   {
+       printf("%d",num>>i&1);
+   }
+  printf("decimal=%d\n",num);
+    printf("hex=%x\n",num);
+   for(i=0,j=31;i<j;i++,j--)
+   {
+       int c=num>>i&1;
+       int d=num>>j&1;
+       if(c!=d)
+       {
+           int temp;
+           temp=c;
+           c=d;
+           d=temp;
+       }
+       
+   }
+   printf("\n");
+   printf("after reset\n\n");
+    for(i=0;i<=31;i++)
+   {
+       printf("%d",num>>i&1);
+   }
+printf("hex=%x\n",num);
+}

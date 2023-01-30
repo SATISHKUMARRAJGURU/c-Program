@@ -1,0 +1,17 @@
+
+#include<stdio.h>
+void main()
+{
+    int i;
+    int num=10;
+     for(i=31;i>=0;i--)
+    {
+        printf("%d",num>>i&1);
+    }
+    printf("\n");
+    num=num^(3<<17);
+    for(i=31;i>=0;i--)
+    {
+        printf("%d",num>>i&1);
+    }
+}
