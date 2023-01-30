@@ -1,0 +1,28 @@
+#include<stdio.h>
+void main()
+{
+    FILE *p,*satish_copy;
+    char str[10],ch;
+    p=fopen("satish_original.txt","w+");
+    printf("enter string\n");
+    scanf("%s",str);
+    fprintf(p,"%s",str);
+    fclose(p);
+    p=fopen("satish_original.txt","r");
+    satish_copy=fopen("satish_copy.txt","w");
+    ch=fgetc(p);
+    while(ch!=EOF){
+    ch=ch+97;
+    fprintf(satish_copy,"%c",ch);
+    ch=fgetc(p);
+  }
+    fclose(p);
+    fclose(satish_copy);
+printf("after encryption\n");
+    satish_copy=fopen("satish_copy.txt","r");
+    ch=fgetc(satish_copy);
+    while(ch!=EOF){
+    printf("%c",ch);
+    ch=fgetc(satish_copy);
+  }
+}
