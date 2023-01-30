@@ -1,0 +1,17 @@
+#include<stdlib.h>
+int main()
+{
+    
+    int *p=(int *)malloc(sizeof (int));
+    *p=10;
+    printf("%d\n",*p);
+    free(p);
+    printf("%d\n",*p);
+    p=0;
+    if(p==0)
+    {
+    printf("this is null");}
+    else{
+    printf(" Null");}
+    
+}
