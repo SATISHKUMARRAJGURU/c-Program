@@ -1,0 +1,11 @@
+#include<stdio.h>
+int main()
+{
+    inumt num;
+    printf("Ener a number\n");
+    scanf("%d",&num);
+    for(int i=31;i>=0;i--)
+    {
+    printf("%d",((num>>i)&1));
+    }
+}
