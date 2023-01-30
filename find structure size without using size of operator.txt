@@ -1,0 +1,14 @@
+#include<stdio.h>
+struct sample
+{
+    int data;
+    char c;
+    float f;
+};
+
+int main()
+{
+    struct sample *p=NULL;
+    p++;
+    printf("the size of structure is=%d\n",p);
+}
