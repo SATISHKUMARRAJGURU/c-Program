@@ -1,8 +1,7 @@
 
 
 #include<stdio.h>
-#include<string.h>
-void main()
+int main()
 {
    int num=10;
    int i,j;
@@ -15,20 +14,20 @@ void main()
     printf("hex=%x\n",num);
    for(i=0,j=31;i<j;i++,j--)
    {
+       
        int c=num>>i&1;
        int d=num>>j&1;
        if(c!=d)
        {
-           int temp;
-           temp=c;
-           c=d;
-           d=temp;
+           num = num ^ 1 << i;
+           num = num ^ 1 << j;
+           
        }
        
    }
    printf("\n");
    printf("after reset\n\n");
-    for(i=0;i<=31;i++)
+    for(i=31;i>=0;i--)
    {
        printf("%d",num>>i&1);
    }
