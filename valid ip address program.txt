@@ -31,7 +31,7 @@ void main()
 void atoi(char *p)
 {
     int a[4]={0};
-    int i,j,k=0,n;
+    int i,j,k=0,n=0;
     static int count=1;
     for(i=0;p[i]!='\0';i++)
     {
